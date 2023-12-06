@@ -1,0 +1,179 @@
+/* public/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #2ecc71; /* Green color */
+    text-decoration: underline;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .habits,
+  .add-habit {
+
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  h2 {
+    color: #3498db; /* Blue color */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ecf0f1; /* Light gray color */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7; /* Light border color */
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #2ecc71; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #27ae60; /* Darker green color on hover */
+  }
+  
+  a {
+    color: #3498db; /* Blue color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .delete-form {
+  display: inline-block; /* Align the form elements horizontally */
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.delete-form button {
+  background-color: #e74c3c; /* Red color for the delete button */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-form button:hover {
+  background-color: #c0392b; /* Darker red color on hover */
+}
+.container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding for better readability */
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    color: #3498db; /* Blue color for headers */
+  }
+  
+  h2 {
+    border-bottom: 2px solid #3498db; /* Add a bottom border to h2 headers */
+    padding-bottom: 10px; /* Adjust the padding as needed */
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  .habit-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .habit-name {
+    font-weight: bold;
+  }
+  
+  .delete-form button {
+    background-color: #e74c3c; /* Red color for the delete button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-form button:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  .back-link a {
+    color: #2ecc71; /* Green color for the back link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }

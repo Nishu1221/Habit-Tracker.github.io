@@ -1,0 +1,28 @@
+<!-- views/add-habit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Habit</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Add New Habit</h1>
+    </header>
+
+    <main class="add-habit">
+      <form action="/habits/add" method="post">
+        <label for="habitName">Habit Name:</label>
+        <input type="text" id="habitName" name="habitName" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <a href="/">Back to Habits</a>
+    </main>
+  </div>
+</body>
+</html>

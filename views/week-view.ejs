@@ -1,0 +1,43 @@
+<!-- views/week-view.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week View</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Week View</h1>
+    </header>
+
+    <main>
+      <section class="habit-details">
+        <h2><%= habit.name %> - Week View</h2>
+        <ul>
+          <% const today = new Date(); %>
+          <% for (let i = 6; i >= 0; i--) { %>
+            <% const day = new Date(); day.setDate(today.getDate() - i); %>
+            <li>
+              <%= day.toDateString() %>: 
+              <% const trackingEntry = habit.tracking.find(entry => entry.day.toDateString() === day.toDateString()); %>
+              <% if (trackingEntry) { %>
+                <%= trackingEntry.status %>
+              <% } else { %>
+                None
+              <% } %>
+            </li>
+          <% } %>
+        </ul>
+      </section>
+
+      <section class="back-link">
+        <a href="/">Back to Habits</a>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

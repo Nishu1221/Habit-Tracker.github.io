@@ -1,0 +1,57 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Habit Tracker</h1>
+    </header>
+
+    <main>
+      <section class="habits">
+        <h2>Your Habits</h2>
+        <ul>
+          <% habits.forEach(habit => { %>
+            <li>
+              <div class="habit-details">
+                <span class="habit-name"><%= habit.name %></span>
+                <form action="/habits/track/<%= habit._id %>" method="post">
+                  <select name="status">
+                    <option value="Done">Done</option>
+                    <option value="Not done">Not done</option>
+                    <option value="None">None</option>
+                  </select>
+                  <button type="submit">Track</button>
+                </form>
+                <form class="delete-form" action="/habits/delete/<%= habit._id %>" method="post">
+                  <button type="submit" onclick="return confirm('Are you sure you want to delete <%= habit.name %> habit?')">Delete</button>
+                </form>
+              </div>
+              <div class="habit-actions">
+                <a href="/habits/week-view/<%= habit._id %>">Week View</a>
+                <!-- Add more links/actions as needed -->
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+
+      <section class="add-habit">
+        <h2>Add New Habit</h2>
+        <form action="/habits/add" method="post">
+          <label for="habitName">Habit Name:</label>
+          <input type="text" id="habitName" name="habitName" required>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
